@@ -27,7 +27,7 @@ export default function PokemonSearch() {
       setPokemon({
         nome: data.name,
         imagem: data.sprites.front_default,
-        tipos: data.types.map((t) => t.type.name).join(", "), // Mapeia os tipos e os junta em uma string separada por vírgulas
+      tipos: data.types.map((t) => t.type.name).join(", "), // Mapeia os tipos e os junta em uma string separada por vírgulas
       });
       // Limpa a mensagem de erro, se houver
       setError(null);
