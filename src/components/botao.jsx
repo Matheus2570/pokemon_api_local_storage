@@ -9,7 +9,7 @@ const MudarTema = () => {
   // Definindo o estado para armazenar o tema. O estado inicial será o valor salvo ou 'light'
   const [tema, setTema] = useState(temaSalvo);
 
-  // Efeito colateral (useEffect) que será executado sempre que o tema mudar
+  // Efeito  que será executado sempre que o tema mudar
   useEffect(() => {
     // Salva o novo valor do tema no localStorage, para que ele persista entre as visitas à página
     localStorage.setItem('tema', tema);

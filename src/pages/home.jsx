@@ -3,7 +3,7 @@ import "./home.css";
 import Botao from "../components/botao"
 
 // Função principal do componente PokemonSearch
-export default function PokemonSearch() {
+ function PokemonSearch() {
   // Definindo o estado para o valor da busca, o Pokémon encontrado e mensagens de erro
   const [search, setSearch] = useState(""); // Estado para armazenar o texto da busca
   const [pokemon, setPokemon] = useState(null); // Estado para armazenar os dados do Pokémon encontrado
@@ -93,3 +93,5 @@ export default function PokemonSearch() {
     </>
   );
 }
+
+export default PokemonSearch
