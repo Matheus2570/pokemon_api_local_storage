@@ -1,37 +1,38 @@
 import React, { useEffect, useState } from "react";
 import "./favoritos.css";
 import Botao from "../components/botao"
-
+ 
+ 
 // Função principal do componente Favoritos
 function Favoritos() {
   // Definindo o estado para armazenar a lista de Pokémon favoritos
   const [favoritos, setFavoritos] = useState([]);
-
+ 
   // Carregar os favoritos do localStorage ao montar o componente
   useEffect(() => {
     // Obtém os favoritos armazenados no localStorage ou um array vazio se não houver dados
     const storedFavoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     // Atualiza o estado com os favoritos carregados
     setFavoritos(storedFavoritos);
-  }, []); // O array vazio [] significa que esse efeito é executado apenas uma vez após a montagem do componente
-
+  }, []);
+ 
   // Função para remover um Pokémon dos favoritos
-  const removerFavorito = (id) => {
-    // Filtra os favoritos, removendo o Pokémon com o ID passado
-    const novosFavoritos = favoritos.filter((pokemon) => pokemon.id !== id);
+  const removerFavorito = (pokemon) => {
+    // Filtra os favoritos, removendo o Pokémon passado
+    const novosFavoritos = favoritos.filter((favorito) => favorito !== pokemon);
     // Atualiza o estado com a lista de favoritos após a remoção
     setFavoritos(novosFavoritos);
     // Salva a lista atualizada no localStorage
     localStorage.setItem("favoritos", JSON.stringify(novosFavoritos));
   };
-
+ 
   return (
     <>
       {/* Div que contém o componente Botao */}
       <div className="botaozao">
         <Botao />
       </div>
-
+ 
       {/* Div principal que contém a lista de Pokémon favoritos */}
       <div className="favoritos-container">
         <h1 className="favoritos-titulo">Favoritos</h1>
@@ -50,7 +51,7 @@ function Favoritos() {
                 {/* Exibe os tipos do Pokémon */}
                 <h4>Tipo: {pokemon.tipos}</h4>
                 {/* Botão para remover o Pokémon dos favoritos */}
-                <button className="remover-botao" onClick={() => removerFavorito(pokemon.id)}>
+                <button className="remover-botao" onClick={() => removerFavorito(pokemon)}>
                   Remover
                 </button>
               </div>
@@ -66,6 +67,5 @@ function Favoritos() {
     </>
   );
 }
-
-// Exporta o componente Favoritos para ser usado em outras partes do aplicativo
+ 
 export default Favoritos;
