@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./favoritos.css";
+import Botao from "../components/botao"
 
 function Favoritos() {
   const [favoritos, setFavoritos] = useState([]);
@@ -18,6 +19,11 @@ function Favoritos() {
   };
 
   return (
+    <>
+    <div className="botaozao">
+    <Botao/>
+    </div>
+
     <div className="favoritos-container">
       <h1 className="favoritos-titulo">Favoritos</h1>
       <hr className="favoritos-linha" />
@@ -40,6 +46,7 @@ function Favoritos() {
         )}
       </div>
     </div>
+    </>
   );
 }
 
