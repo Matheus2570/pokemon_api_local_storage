@@ -8,7 +8,7 @@
     margin: 50px auto 0;
     width: 30%;
     padding: 16px;
-    background: #092a6c59;
+    background: #092a6c97;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -62,11 +62,13 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+  color: black;
   }
   
   .pokemon-card p {
     font-size: 16px;
     color: #374151;
+    
   }
   
   .favorites-button {
