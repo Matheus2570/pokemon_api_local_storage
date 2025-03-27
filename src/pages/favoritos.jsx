@@ -1,20 +1,3 @@
-// import "./favoritos.css"
-
-// function Favoritos() {
-//     return (
-//       <div>
-//         <h1>Favoritos</h1>
-//         <p>Aqui estão seus itens favoritos!</p>
-//         <botton> </botton>
-
-//       </div>
-
-//     );
-//   }
-  
-//   export default Favoritos;
-  
-
 import React, { useEffect, useState } from "react";
 import "./favoritos.css";
 
@@ -35,26 +18,25 @@ function Favoritos() {
   };
 
   return (
-    <div className="container">
-      <h1>Favoritos</h1>
-     <hr></hr>
-      <div className="pokemon-list">
-
+    <div className="favoritos-container">
+      <h1 className="favoritos-titulo">Favoritos</h1>
+      <hr className="favoritos-linha" />
+      <div className="pokemon-lista">
         {favoritos.length > 0 ? (
-
           favoritos.map((pokemon) => (
-            
-            <div key={pokemon.id} className="pokemon-card">
+            <div key={pokemon.id} className="pokemon-card-favoritos">
               <h2>{pokemon.nome}</h2>
               <img src={pokemon.imagem} alt={pokemon.nome} />
               <h4>Tipo: {pokemon.tipos}</h4>
-              <button onClick={() => removerFavorito(pokemon.id)}>
+              <button className="remover-botao" onClick={() => removerFavorito(pokemon.id)}>
                 Remover
               </button>
             </div>
           ))
         ) : (
-          <marquee direction= "right"><p className="texto">Você não tem nenhum Pokémon favorito.</p></marquee>
+          <marquee className="mensagem-sem-favoritos" direction="right">
+            Você não tem nenhum Pokémon favorito.
+          </marquee>
         )}
       </div>
     </div>

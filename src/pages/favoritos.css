@@ -1,45 +1,95 @@
-.container {
-    text-align: center;
-    margin-top: 50px;
+/* Estilo do container principal */
+.favoritos-container {
+  margin: 50px auto 0;
+  width: 40%;
+  padding: 16px;
+  background: #092a6c97;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
-.texto{
-    margin-left: 19%;
-    color: #ef2525;
-
-    h3{
-        color: aliceblue;
-    }
+/* Estilo do título */
+.favoritos-titulo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.pokemon-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .pokemon-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    width: 150px;
-  }
-  
-  .pokemon-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  button {
-    margin-top: 8px;
-    padding: 8px 12px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ff4c4c;
-  }
+
+/* Estilo da linha horizontal */
+.favoritos-linha {
+  border: 1px solid #ffffff;
+}
+
+/* Estilo do bloco de lista de Pokémons */
+.pokemon-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo do card de cada Pokémon */
+.pokemon-card-favoritos {
+  text-align: center;
+  margin-top: 20px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #374151;
+}
+
+.pokemon-card img {
+  max-width: 120px;
+  margin-top: 10px;
+}
+
+.pokemon-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+
+.pokemon-card h4 {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #5a5a5a;
+}
+
+.pokemon-card p {
+  font-size: 16px;
+  color: #374151;
+}
+
+/* Estilo do botão de remover */
+.remover-botao {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.remover-botao:hover {
+  background-color: #059669;
+}
+
+/* Estilo da mensagem de texto se não houver favoritos */
+.mensagem-sem-favoritos {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Estilo da tag marquee (movendo a mensagem para direita) */
+marquee {
+  margin-top: 20px;
+}
