@@ -1,26 +1,31 @@
-import { useEffect, useState } from "react";
-import "./botao.css";
+import React, { useState, useEffect } from 'react';
+import "./botao.css"
 
- function BotaoTema() {
-  const [temaEscuro, setTemaEscuro] = useState(() => {
-    return localStorage.getItem("tema") === "escuro";
-  });
+const MudarTema = () => {
+  // Verifica se já existe um valor salvo no localStorage
+  const temaSalvo = localStorage.getItem('tema') || 'light';
 
+  // Estado para armazenar o tema
+  const [tema, setTema] = useState(temaSalvo);
+
+  // Efeito para atualizar o localStorage sempre que o tema mudar
   useEffect(() => {
-    if (temaEscuro) {
-      document.documentElement.classList.add("modo-escuro");
-      localStorage.setItem("tema", "escuro");
-    } else {
-      document.documentElement.classList.remove("modo-escuro");
-      localStorage.setItem("tema", "claro");
-    }
-  }, [temaEscuro]);
+    localStorage.setItem('tema', tema);
+    document.body.className = tema; // Adiciona a classe correspondente ao corpo do site
+  }, [tema]); // Esse efeito é executado toda vez que o tema mudar
+
+  // Função para alternar entre os temas
+  const alternarTema = () => {
+    setTema(prevTema => (prevTema === 'light' ? 'dark' : 'light'));
+  };
 
   return (
-    <button onClick={() => setTemaEscuro(!temaEscuro)} className="botao-tema">
-      {temaEscuro ? "Modo Claro" : "Modo Escuro"}
-    </button>
+    <div>
+      <button className="botao-tema" onClick={alternarTema}>
+       {tema === 'light' ? 'Tema Claro ☀️ ' : 'Tema Escuro 🌙'}
+      </button>
+    </div>
   );
-}
+};
 
-export default BotaoTema;
+export default MudarTema;

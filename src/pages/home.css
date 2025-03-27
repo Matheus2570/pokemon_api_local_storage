@@ -4,18 +4,17 @@
     margin-top: 5%;
 }
 
-
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+    margin: 50px auto 0;
+    width: 30%;
     padding: 16px;
-    background: #f3f4f6;
+    background: #092a6c97;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
   
   .input-field {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -26,17 +25,17 @@
   .button {
     width: 100%;
     padding: 10px;
-    background-color: #2563eb;
+    background-color: #3262caee;
     color: white;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: wait;
     font-size: 16px;
     transition: background 0.3s;
   }
   
   .button:hover {
-    background-color: #1d4ed8;
+    background-color: #0a37b1;
   }
   
   .error-message {
@@ -63,14 +62,17 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+  color: black;
   }
   
   .pokemon-card p {
     font-size: 16px;
     color: #374151;
+    
   }
   
   .favorites-button {
+    border: none;
     margin-top: 10px;
     background-color: #10b981;
     color: white;
@@ -82,5 +84,6 @@
   
   .favorites-button:hover {
     background-color: #059669;
+    border: 2px solid black;
   }
   

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./navBarra.css"
 
+
 function Nav() {
   return (
     <>
