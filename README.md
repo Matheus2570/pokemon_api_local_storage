@@ -1,12 +1,43 @@
-# React + Vite
+Projeto: Pokédex com React e Local Storage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto desenvolvido em React.js que consome uma API de Pokémon para buscar informações sobre os monstrinhos. Possui funcionalidades para salvar os Pokémon pesquisados em uma página separada usando Local Storage.
 
-Currently, two official plugins are available:
+📂 Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto está organizado da seguinte forma:
 
-## Expanding the ESLint configuration
+src/components/ - Componentes reutilizáveis.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/pages/ - Páginas principais do projeto.
+
+src/routes/ - Configuração de rotas utilizando React Router.
+
+src/services/ - Funções para requisições HTTP na API de Pokémon.
+
+src/utils/ - Funções auxiliares, como manipulação do Local Storage.
+
+src/App.js - Componente principal do projeto.
+
+src/index.js - Ponto de entrada da aplicação.
+
+📌 Funcionalidades
+
+Busca de Pokémon: O usuário pode pesquisar um Pokémon pelo nome ou ID.
+
+Exibição de Dados: Mostra informações detalhadas sobre o Pokémon encontrado.
+
+Salvar Favoritos: Permite salvar Pokémon pesquisados em uma página separada, armazenando-os no Local Storage.
+
+Navegação entre Páginas: Uso do react-router-dom para transição entre a busca e a página de favoritos sem recarregar a página.
+
+🛠️ Tecnologias Utilizadas
+
+React.js
+
+React Router DOM
+
+Fetch API para consumo de dados
+
+Local Storage para persistência de dados
+
+Componentização para melhor organização do código
