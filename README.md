@@ -29,6 +29,6 @@ O projeto está organizado da seguinte forma:
 
 
 ## 🚀 Como vizualizar?
-``bash
+```bash
 https://pokemon-api-local-storage-qiqg.vercel.app/
 
