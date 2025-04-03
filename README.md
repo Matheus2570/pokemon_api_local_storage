@@ -27,3 +27,8 @@ O projeto está organizado da seguinte forma:
 - Componentização para melhor organização do código
 
 
+
+## 🚀 Como vizualizar?
+``bash
+https://pokemon-api-local-storage-qiqg.vercel.app/
+
