@@ -30,7 +30,7 @@ const MudarTema = () => {
       {/* Botão que chama a função alternarTema ao ser clicado */}
       <button className="botao-tema" onClick={alternarTema}>
         {/* O texto do botão muda dependendo do tema atual */}
-        {tema === 'light' ? 'Tema Claro ☀️ ' : 'Tema Escuro 🌙'}
+        {tema === 'light' ? '☀️ ' : '🌙'}
       </button>
     </div>
   );
