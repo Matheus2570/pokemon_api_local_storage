@@ -58,9 +58,9 @@ function Favoritos() {
             ))
           ) : (
             // Se não houver Pokémon nos favoritos, exibe uma mensagem
-            <marquee className="mensagem-sem-favoritos" direction="right">
-              Você não tem nenhum Pokémon favorito.
-            </marquee>
+           <marquee className="mensagem-sem-favoritos" direction="right" scrollamount="5">
+  Você não tem nenhum Pokémon favorito.
+</marquee>
           )}
         </div>
       </div>
