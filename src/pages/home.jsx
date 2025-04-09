@@ -42,9 +42,9 @@ function PokemonSearch() {
 
       // Limpa qualquer mensagem de erro
       setError(null);
-    } catch (err) {
+    } catch (erro) {
       // Se ocorrer um erro (como Pokémon não encontrado), atualiza o estado com a mensagem de erro
-      setError(err.message);
+      setError(erro.message);
       setPokemon(null); // Limpa os dados do Pokémon
     }
   };
