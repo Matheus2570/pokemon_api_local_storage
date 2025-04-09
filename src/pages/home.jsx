@@ -8,14 +8,14 @@ import Botao from "../components/botao"
 // Função principal do componente PokemonSearch
 function PokemonSearch() {
   // Declaração de estados:
-  const [search, setSearch] = useState(""); // Estado para armazenar o texto digitado na barra de busca
+  const [busca, setBusca] = useState(""); // Estado para armazenar o texto digitado na barra de busca
   const [pokemon, setPokemon] = useState(null); // Estado para armazenar os dados do Pokémon pesquisado
   const [error, setError] = useState(null); // Estado para armazenar mensagens de erro
 
   // Função assíncrona para buscar o Pokémon da API
   const fetchPokemon = async () => {
     // Verifica se o campo de busca está vazio
-    if (!search.trim()) {
+    if (!busca.trim()) {
       setError("Por favor, digite o nome ou ID do Pokémon."); // Exibe mensagem de erro se o campo estiver vazio
       setPokemon(null); // Limpa qualquer dado do Pokémon anterior
       return; // Interrompe a execução da função se o campo estiver vazio
@@ -23,7 +23,7 @@ function PokemonSearch() {
 
     try {
       // Faz a requisição para a API do Pokémon com o nome ou ID fornecido
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${search.toLowerCase()}`);
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${busca.toLowerCase()}`);
       
       // Se a resposta não for ok (por exemplo, Pokémon não encontrado), gera um erro
       if (!response.ok) {
@@ -80,8 +80,8 @@ function PokemonSearch() {
         <input
           type="text"
           placeholder="Digite o nome ou ID do Pokémon"
-          value={search} // Valor controlado do campo de busca
-          onChange={(e) => setSearch(e.target.value)} // Atualiza o estado de "search" ao digitar
+          value={busca} // Valor controlado do campo de busca
+          onChange={(e) => setBusca(e.target.value)} // Atualiza o estado de "search" ao digitar
           className="input-field"
         />
         
